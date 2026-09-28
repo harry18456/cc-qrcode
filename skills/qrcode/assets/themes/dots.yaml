@@ -1,0 +1,4 @@
+description: Round dot modules with rounded finders and round finder centers.
+# Fully circular finders were not decoded by zbar at 28-40 px per module; rounded outer rings are.
+modules: {shape: dot, size: auto}
+finder: {outer: rounded, inner: circle}

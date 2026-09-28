@@ -1,0 +1,3 @@
+description: Rounded modules and rounded finders; friendly, still very robust.
+modules: {shape: rounded, size: auto, radius: 0.6}
+finder: {outer: rounded, inner: rounded}

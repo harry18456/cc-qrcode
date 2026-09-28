@@ -1,0 +1,26 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vs/
+.vscode/
+*.suo
+*.user
+
+# Temp
+*.tmp
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Engine output folders (default names next to a spec / card file)
+qr_out/
+card_out/
+
+# Eval runs (outputs, images, viewer)
+eval/workspace/

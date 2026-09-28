@@ -1,0 +1,3 @@
+description: Standard square modules and finders; maximum robustness.
+modules: {shape: square, size: auto}
+finder: {outer: square, inner: square}

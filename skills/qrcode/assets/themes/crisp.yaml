@@ -1,0 +1,3 @@
+description: Squircle modules with square finders; modern and compact.
+modules: {shape: squircle, size: auto}
+finder: {outer: square, inner: rounded}

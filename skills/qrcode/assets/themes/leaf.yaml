@@ -1,0 +1,3 @@
+description: Leaf-shaped modules and finders (two rounded, two sharp corners).
+modules: {shape: leaf, size: auto}
+finder: {outer: leaf, inner: leaf}

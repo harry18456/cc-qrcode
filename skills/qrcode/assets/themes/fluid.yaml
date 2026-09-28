@@ -1,0 +1,3 @@
+description: Connected dots that merge into strokes; rounded finders.
+modules: {shape: connected, size: auto}
+finder: {outer: rounded, inner: circle}

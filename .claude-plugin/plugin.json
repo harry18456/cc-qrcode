@@ -1,0 +1,14 @@
+{
+  "name": "qrcode",
+  "displayName": "Verified QR Codes",
+  "version": "0.1.0",
+  "description": "Design, build and verify QR codes that are guaranteed to scan — logo in the middle, brand colors or gradients, dot/rounded/leaf modules, custom finders, cards with text — for print or screens. A deterministic engine picks EC level, version, mask and logo size, then gates every design on per-block error budget, structure, contrast, two decoders and robustness sweeps. Cross-platform: runs with uv or a plain Python 3.12-3.14, no system libraries.",
+  "author": {
+    "name": "Harry",
+    "url": "https://github.com/harry18456"
+  },
+  "homepage": "https://github.com/harry18456/cc-qrcode",
+  "repository": "https://github.com/harry18456/cc-qrcode",
+  "license": "MIT",
+  "keywords": ["qrcode", "qr-code", "logo", "branding", "print", "wifi", "vcard", "zxing", "zbar", "uv", "skill", "claude-code"]
+}

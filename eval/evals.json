@@ -1,0 +1,41 @@
+{
+  "skill_name": "qrcode",
+  "notes": "Evals 1-4 reuse the round-2 prompts of the Cowork session that built the engine (artistic-qr-code v1.2), so results stay comparable. Eval 5 covers the image rule added in the port: no file from the user -> the agent draws an SVG and offers to swap in the user's own file. Input images are stand-ins drawn with Pillow; the originals stayed in the Cowork sandbox.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "logo-flyer-print",
+      "prompt": "幫我做一個活動報名頁的 QR code，網址是 https://example.org/events/2026/autumn-fair 。中間要放我們的 logo（檔案在 inputs/logo.png），顏色用品牌深藍 #1B3A6B，會印在 A5 傳單上，大概 3 公分寬，大家應該會在 30 公分左右的距離掃。",
+      "expected_output": "A passing print build at 30 mm with the logo centered and navy modules; SVG/PNG (PDF for print), a Chinese reply with the symbol, logo size, the distance warning and the phone check.",
+      "files": ["inputs/logo.png"]
+    },
+    {
+      "id": 2,
+      "name": "wifi-dots-screen",
+      "prompt": "can you make a nice looking QR code for our cafe guest wifi? network is CafeGuest, WPA2, password latte2026. I'd like round dots instead of the usual squares and a warm coffee brown color. it'll be shown on the tablet at the counter",
+      "expected_output": "A passing Wi-Fi build with dot modules in a brown that passes contrast, a tablet-sized card with the network name and password as text, and an English reply.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "oversized-logo-business-card",
+      "prompt": "我要把這個商品連結做成 QR code 印在名片背面：https://www.example-shop.com/collections/autumn-sale/products/merino-wool-cardigan-limited-edition?utm_source=print&utm_medium=business_card&utm_campaign=autumn2026&ref=store12 ，中間放 logo（inputs/logo.png），logo 要大一點，差不多佔 QR code 寬度的 40%，整個 QR code 印出來 2 公分寬。",
+      "expected_output": "No FAILED file delivered. The reply explains with computed numbers that 40% at 2 cm does not fit (largest logo, width needed, shorter URL) and delivers only passing alternatives.",
+      "files": ["inputs/logo.png"]
+    },
+    {
+      "id": 4,
+      "name": "wordmark-table-card",
+      "prompt": "幫我們餐廳做桌上立牌用的 QR code，連到菜單 https://example.org/bistro-nova/menu 。中間放我們的橫式 logo（inputs/wordmark.png），顏色配 logo 的深綠。立牌是 A6 大小（10.5 × 14.8 cm），QR 上面寫「掃描看菜單」，下面寫「Wi-Fi：BistroGuest｜密碼：nova2026」。客人大概坐著在 40 公分左右掃。",
+      "expected_output": "A passing build in the wordmark's dark green, an A6 card (PDF 105 x 148 mm) with both text lines that decodes after layout, and a Chinese reply.",
+      "files": ["inputs/wordmark.png"]
+    },
+    {
+      "id": 5,
+      "name": "drawn-icon-poster",
+      "prompt": "幫我們讀書會做一個招募用的 QR code，連到 https://example.org/bookclub/join 。想要有點可愛的感覺，中間放一個書本圖案，顏色用深綠色。會印在 A4 海報上，大概 5 公分寬。",
+      "expected_output": "The agent draws a book SVG itself (no file was given), the build passes with that SVG as the center image, and the reply says the icon was drawn and offers to use the user's own file instead.",
+      "files": []
+    }
+  ]
+}

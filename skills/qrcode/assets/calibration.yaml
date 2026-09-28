@@ -1,0 +1,8 @@
+# Real-phone scan tests feed the scan-distance estimate. Add one entry per test: the printed module
+# size (report: Physical size) and the farthest distance at which the phone scanned the code
+# reliably (3 of 3 attempts). With 3 or more entries the engine uses the median of
+#   max_distance_mm / (module_mm * style_factor)
+# instead of the default heuristic, and reports say "calibrated from N phone tests".
+# style_factor is the "style factor" from the same report (1.0 for plain codes).
+observations: []
+#  - {module_mm: 0.67, max_distance_mm: 260, style_factor: 1.0, device: "phone model + app", date: 2026-10-01}
